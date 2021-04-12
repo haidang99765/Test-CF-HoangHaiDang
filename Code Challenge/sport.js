@@ -23,27 +23,4 @@ var app = fetch(listAPI).then((response) => response.json()).then((data) => {
     </div>`;
             document.querySelector(".quiz").insertAdjacentHTML("beforeend", questions);
         }
-
-        var answers = document.querySelector(".form");
-        document.querySelector(".submit").addEventListener("click", (event) => {
-            event.preventDefault();
-            var count = 0;
-            for (var i = 0; i < data.results.length; i++) {
-                var a = "answers.answers" + i + ".value";
-                answer = eval(a);
-                var showQuestionsInConsole  = data.results[i].correct_answer;
-                console.log ("The correct answer of question " + `${i + 1}` + ':' , showQuestionsInConsole);
-                if (answer == data.results[i].correct_answer) {
-                    count++;
-                    document.querySelector(".error" + i).innerHTML =
-                        "<p style='color: green;'>Correct</p>";
-                } else {
-                    document.querySelector(".error" + i).innerHTML =
-                        "<p style='color: red;'>Incorrect</p>";
-                }
-            }
-            alert("Correct answers: " + count);
-            document.querySelector(".result").textContent =
-                "Correct" + "    " + count + "/" + data.results.length;
-        });
     });
