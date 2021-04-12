@@ -25,7 +25,7 @@ function compare(arr1, arr2) {
 }
 console.log('Mảng 1: ', arr1);
 console.log('Mảng 2: ', arr2);
-console.log ('Mảng của sau khi được gộp: ', compare(arr1, arr2));
+console.log ('Mảng mới sau khi được gộp: ', compare(arr1, arr2));
 
 
 
