@@ -31,7 +31,8 @@ var app = fetch(listAPI).then((response) => response.json()).then((data) => {
             for (var i = 0; i < data.results.length; i++) {
                 var a = "answers.answers" + i + ".value";
                 answer = eval(a);
-                console.log(answer);
+                var showQuestionsInConsole  = data.results[i].correct_answer;
+                console.log ("The correct answer of question " + `${i + 1}` + ':' , showQuestionsInConsole);
                 if (answer == data.results[i].correct_answer) {
                     count++;
                     document.querySelector(".error" + i).innerHTML =
