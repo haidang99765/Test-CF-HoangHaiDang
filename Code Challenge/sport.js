@@ -38,7 +38,7 @@ var app = fetch(listAPI).then((response) => response.json()).then((data) => {
                         "<p style='color: green;'>Correct</p>";
                 } else {
                     document.querySelector(".error" + i).innerHTML =
-                        "<p style='color: red;'>Wrong</p>";
+                        "<p style='color: red;'>Incorrect</p>";
                 }
             }
             alert("Correct answers: " + count);
