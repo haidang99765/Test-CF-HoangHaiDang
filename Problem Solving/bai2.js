@@ -63,4 +63,3 @@ ranking.sort(function sosanh(club1, club2) {
     } 
 });
 console.log('Bảng xếp hạng Premier League: ', ranking);
-//bug: chưa biết cách làm nếu cả point và GD bằng nhau thì xét đến alphabet
