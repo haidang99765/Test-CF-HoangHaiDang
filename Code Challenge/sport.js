@@ -24,3 +24,5 @@ var app = fetch(listAPI).then((response) => response.json()).then((data) => {
             document.querySelector(".quiz").insertAdjacentHTML("beforeend", questions);
         }
     });
+
+//em chưa làm được phần xử lí ạ, mới xong giao diện thôi ạ, có gì anh chị châm chước cho em với ạ :(
